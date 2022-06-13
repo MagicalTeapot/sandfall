@@ -1,5 +1,4 @@
-#ifndef INCLUDED_ALCHIMIA_WINDOW
-#define INCLUDED_ALCHIMIA_WINDOW
+#pragma once
 #include "event.h"
 
 #include <glm/glm.hpp>
@@ -61,5 +60,3 @@ private:
 };
 
 }
-
-#endif // INCLUDED_ALCHIMIA_WINDOW

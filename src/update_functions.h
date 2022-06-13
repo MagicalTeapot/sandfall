@@ -1,13 +1,10 @@
-#ifndef INCLUDED_ALCHIMIA_UPDATE_FUNCTIONS
-#define INCLUDED_ALCHIMIA_UPDATE_FUNCTIONS
+#pragma once
 #include "pixel_api.h"
 
 namespace alc {
 
-void update_sand(pixel_api&& api, double dt);
-void update_water(pixel_api&& api, double dt);
-void update_rock(pixel_api&& api, double dt);
+void update_sand(pixel_api&& api, const world_settings&, double dt);
+void update_water(pixel_api&& api, const world_settings&, double dt);
+void update_rock(pixel_api&& api, const world_settings&, double dt);
     
 }
-
-#endif // INCLUDED_ALCHIMIA_UPDATE_FUNCTIONS

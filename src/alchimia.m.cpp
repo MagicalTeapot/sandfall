@@ -28,6 +28,7 @@ std::string_view to_string(alc::pixel_type type)
         case alc::pixel_type::water: return "water";
         case alc::pixel_type::rock: return "rock";
         case alc::pixel_type::red_sand: return "red_sand";
+        default: return "unknown";
     }
 }
 

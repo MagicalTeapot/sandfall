@@ -1,5 +1,4 @@
-#ifndef INCLUDED_ALCHIMIA_SHADER
-#define INCLUDED_ALCHIMIA_SHADER
+#pragma once
 #include <glm/glm.hpp>
 
 #include <cstdint>
@@ -28,5 +27,3 @@ public:
 };
 
 }
-
-#endif // INCLUDED_ALCHIMIA_SHADER

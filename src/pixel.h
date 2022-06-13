@@ -1,5 +1,4 @@
-#ifndef INCLUDED_ALCHIMIA_PIXEL
-#define INCLUDED_ALCHIMIA_PIXEL
+#pragma once
 #include <glm/glm.hpp>
 
 namespace alc {
@@ -31,5 +30,3 @@ struct pixel
 };
 
 }
-
-#endif // INCLUDED_ALCHIMIA_PIXEL

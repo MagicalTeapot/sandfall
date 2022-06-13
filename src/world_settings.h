@@ -1,5 +1,4 @@
-#ifndef INCLUDED_ALCHIMIA_WORLD_SETTINGS
-#define INCLUDED_ALCHIMIA_WORLD_SETTINGS
+#pragma once
 #include <glm/glm.hpp>
 
 namespace alc {
@@ -15,5 +14,3 @@ struct world_settings
 };
 
 }
-
-#endif // INCLUDED_ALCHIMIA_WORLD_SETTINGS

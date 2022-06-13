@@ -1,5 +1,4 @@
-#ifndef INCLUDED_ALCHIMIA_EVENT
-#define INCLUDED_ALCHIMIA_EVENT
+#pragma once
 #include <glm/glm.hpp>
 
 #include <any>
@@ -111,5 +110,3 @@ struct window_maximise_event {};
 struct window_minimise_event {};
 
 }
-
-#endif // INCLUDED_ALCHIMIA_EVENT

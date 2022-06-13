@@ -7,10 +7,10 @@
 
 namespace alc {
 
-void update_sand(pixel_api&& api, double dt)
+void update_sand(pixel_api&& api, const world_settings& world, double dt)
 {
     auto& vel = api.get({0, 0}).velocity;
-    vel += api.world_settings().gravity * (float)dt;
+    vel += world.gravity * (float)dt;
     glm::ivec2 offset{0, glm::max(1, (int)vel.y)};
 
     if (api.move_to(offset) != glm::ivec2{0, 0}) {
@@ -34,10 +34,10 @@ void update_sand(pixel_api&& api, double dt)
     }
 }
 
-void update_water(pixel_api&& api, double dt)
+void update_water(pixel_api&& api, const world_settings& world, double dt)
 {
     auto& vel = api.get({0, 0}).velocity;
-    vel += api.world_settings().gravity * (float)dt;
+    vel += world.gravity * (float)dt;
     auto offset = glm::ivec2{0, glm::max(1, (int)vel.y)};
     
     if (api.move_to(offset) != glm::ivec2{0, 0}) {
@@ -63,7 +63,7 @@ void update_water(pixel_api&& api, double dt)
     }
 }
 
-void update_rock(pixel_api&& api, double dt)
+void update_rock(pixel_api&& api, const world_settings&, double dt)
 {
     api.get({0, 0}).updated_this_frame = true;
 }

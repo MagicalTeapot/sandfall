@@ -1,5 +1,4 @@
-#ifndef INCLUDED_ALCHIMIA_LOG
-#define INCLUDED_ALCHIMIA_LOG
+#pragma once
 #include <string>
 #include <fmt/core.h>
 #include <fmt/color.h>
@@ -43,5 +42,3 @@ void fatal(std::string_view format, Args&&... args)
 
 }
 }
-
-#endif // INCLUDED_ALCHIMIA_LOG
