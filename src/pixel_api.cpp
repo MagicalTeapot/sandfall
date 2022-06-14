@@ -55,9 +55,4 @@ pixel& pixel_api::get(glm::ivec2 offset)
     return d_pixels_ref[get_pos(d_pos + offset)];
 }
 
-bool pixel_api::valid(glm::ivec2 offset)
-{
-    return tile::valid(d_pos + offset);
-}
-
 }
