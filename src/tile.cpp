@@ -44,7 +44,7 @@ void tile::bind() const
     glBindTexture(GL_TEXTURE_2D, d_texture);
 }
 
-void tile::simulate(const world_settings& settings, double dt)
+void tile::simulate(double dt)
 {
     const auto inner = [&] (std::uint32_t x, std::uint32_t y) {
         auto& pixel = d_pixels[get_pos({x, y})];
