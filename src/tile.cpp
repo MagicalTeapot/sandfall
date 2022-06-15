@@ -51,13 +51,13 @@ void tile::simulate(double dt)
         if (pixel.updated_this_frame) { return; }
         switch (pixel.type) {
             case pixel_type::sand: {
-                update_sand({d_pixels, {x, y}}, dt);
+                update_sand(d_pixels, glm::ivec2{x, y}, dt);
             } break;
             case pixel_type::rock: {
-                update_rock({d_pixels, {x, y}}, dt);
+                update_rock(d_pixels, glm::ivec2{x, y}, dt);
             } break;
             case pixel_type::water: {
-                update_water({d_pixels, {x, y}}, dt);
+                update_water(d_pixels, glm::ivec2{x, y}, dt);
             }
             case pixel_type::air: return;
         }

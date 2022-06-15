@@ -26,7 +26,6 @@ std::string_view to_string(alc::pixel_type type)
         case alc::pixel_type::sand: return "sand";
         case alc::pixel_type::water: return "water";
         case alc::pixel_type::rock: return "rock";
-        case alc::pixel_type::red_sand: return "red_sand";
         default: return "unknown";
     }
 }
@@ -43,18 +42,16 @@ public:
             case alc::pixel_type::air: d_type = alc::pixel_type::sand; return;
             case alc::pixel_type::sand: d_type = alc::pixel_type::water; return;
             case alc::pixel_type::water: d_type = alc::pixel_type::rock; return;
-            case alc::pixel_type::rock: d_type = alc::pixel_type::red_sand; return;
-            case alc::pixel_type::red_sand: d_type = alc::pixel_type::air; return;
+            case alc::pixel_type::rock: d_type = alc::pixel_type::air; return;
         }
     }
 
     inline void operator--() {
         switch (d_type) {
-            case alc::pixel_type::air: d_type = alc::pixel_type::red_sand; return;
+            case alc::pixel_type::air: d_type = alc::pixel_type::rock; return;
             case alc::pixel_type::sand: d_type = alc::pixel_type::air; return;
             case alc::pixel_type::water: d_type = alc::pixel_type::sand; return;
             case alc::pixel_type::rock: d_type = alc::pixel_type::water; return;
-            case alc::pixel_type::red_sand: d_type = alc::pixel_type::rock; return;
         }
     }
 };
@@ -160,7 +157,6 @@ int main()
                     case alc::pixel_type::sand: tile->set(coord, pixel::sand()); break;
                     case alc::pixel_type::water: tile->set(coord, pixel::water()); break;
                     case alc::pixel_type::rock: tile->set(coord, pixel::rock()); break;
-                    case alc::pixel_type::red_sand: tile->set(coord, pixel::red_sand()); break;
                 }
             }
         }
